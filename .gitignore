@@ -1,0 +1,17 @@
+# Build output
+/build/
+*.o
+*.a
+*.so
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Archives (local copies)
+*.zip
+*.tar.gz

@@ -1,0 +1,41 @@
+#ifndef OLEDTTY_CONFIG_H
+#define OLEDTTY_CONFIG_H
+
+#include <stdint.h>
+
+#define OLEDTTY_VERSION "2.0.3"
+
+#define OLEDTTY_I2C_BUS_PATH "/dev/i2c-1"
+#define OLEDTTY_I2C_ADDRESS  0x3C
+
+#define OLEDTTY_WIDTH   128
+#define OLEDTTY_HEIGHT   64
+#define OLEDTTY_PAGES   (OLEDTTY_HEIGHT / 8)
+#define OLEDTTY_FB_SIZE (OLEDTTY_WIDTH * OLEDTTY_PAGES)
+
+#define OLEDTTY_CONTRAST 0x8F
+
+#define OLEDTTY_VCSA_PATH "/dev/vcsa1"
+
+#define OLEDTTY_POLL_INTERVAL_MS 80
+#define OLEDTTY_CURSOR_BLINK_MS  500
+
+#define OLEDTTY_MAX_TERM_ROWS 30
+#define OLEDTTY_MAX_TERM_COLS 80
+
+/* 5x7 font — 8 lines x 21 cols on 128x64 (6x8 cells) */
+#define OLEDTTY_FONT_W           5
+#define OLEDTTY_FONT_H           7
+#define OLEDTTY_CHAR_CELL_W      6
+#define OLEDTTY_CHAR_CELL_H      8
+#define OLEDTTY_TEXT_MARGIN_X    1
+#define OLEDTTY_TEXT_MARGIN_Y    0
+#define OLEDTTY_VISIBLE_COLS    21
+#define OLEDTTY_VISIBLE_ROWS     8
+
+#define OLEDTTY_HISTORY_CAPACITY 128
+#define OLEDTTY_HISTORY_LINE_LEN  (OLEDTTY_MAX_TERM_COLS + 1)
+
+#define OLEDTTY_CONTROL_SOCKET "/run/oledtty.sock"
+
+#endif
